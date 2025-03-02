@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane.*?>
+<?import javafx.scene.control.Label.*?>
+<?import javafx.scene.layout.AnchorPane.*?>
+<?import javafx.scene.layout.HBox.*?>
+<?import javafx.scene.layout.VBox.*?>
+<?import javafx.scene.layout.GridPane.*?>
+<?import javafx.scene.layout.ColumnConstraints.*?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.pw.mini.movieapp.controllers.MediaPageController">
+    <content>
+        <AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@styles.css">
+            <children>
+                <!-- Include toolbar -->
+                <fx:include fx:id="toolbar" source="toolbar.fxml" />
+
+                <!-- Main layout -->
+                <HBox spacing="20" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="120.0">
+                    
+                    <!-- Include filter options -->
+                    <fx:include fx:id="filterOptions" source="filter-options.fxml" />
+                    
+                    <!-- Main content area -->
+                    <VBox spacing="20" HBox.hgrow="ALWAYS" alignment="CENTER">
+                        <Label fx:id="categoryLabel" style="-fx-font-size: 24;" />
+                        <ProgressIndicator fx:id="loadingIndicator" visible="false"/>
+                        <GridPane fx:id="mediaGrid" hgap="10" vgap="10" VBox.vgrow="ALWAYS">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="ALWAYS" prefWidth="60.0" />
+                                <ColumnConstraints hgrow="ALWAYS" prefWidth="60.0" />
+                                <ColumnConstraints hgrow="ALWAYS" prefWidth="60.0" />
+                                <ColumnConstraints hgrow="ALWAYS" prefWidth="60.0" />
+                            </columnConstraints>
+                        </GridPane>
+                        <Button fx:id="loadMoreButton" text="Load More" 
+                                styleClass="load-more-button" 
+                                prefWidth="200" />
+                    </VBox>
+
+                </HBox>
+                
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

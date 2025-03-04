@@ -6,6 +6,6 @@ Additionally, users can create and manage a personalized watch list, which can b
 A demonstration video showcasing the application’s functionalities is available at: 
 https://drive.google.com/file/d/1DMCs6loOdyqtG6PG9U5lk10K_SeJXUB-/view
 
-# Authors
+### Authors
 - [Paula Wołkowska](https://github.com/pwolkowska)
 - [Zuzanna Zalewska](https://github.com/zalewskaz)

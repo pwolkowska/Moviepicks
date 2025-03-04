@@ -4,6 +4,7 @@ The app utilizes the **TMDB API** to provide users with a platform to search for
 Additionally, users can create and manage a personalized watch list, which can be modified and saved as a text file. The application features an intuitive interface built with JavaFX.
 
 A demonstration video showcasing the application’s functionalities is available at: 
+https://drive.google.com/file/d/1DMCs6loOdyqtG6PG9U5lk10K_SeJXUB-/view
 
 # Authors
 - [Paula Wołkowska](https://github.com/pwolkowska)

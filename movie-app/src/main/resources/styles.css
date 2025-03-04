@@ -1,0 +1,181 @@
+/* styles.css */
+
+* {
+    -toolbar-bg-color: #1b2040;
+    -toolbar-gradient: linear-gradient(to right, #16c8c8, #639aed);
+}
+
+.trending-hbox {
+    -fx-padding: 15;
+}
+
+.movie-card {
+    -fx-background-color: #e0e0e0;
+    background-color: #e0e0e0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.toolbar {
+    -fx-background-color: -toolbar-bg-color;
+    background-color: -toolbar-bg-color;
+}
+
+.toolbar-button {
+    -fx-font-size: 25px;
+    -fx-background-color: -toolbar-bg-color;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+
+.toolbar-button .text {
+    -fx-fill: -toolbar-gradient;
+}
+
+.menu-button {
+    -fx-background-color: -toolbar-bg-color;
+    background-color: -toolbar-bg-color;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-insets: 0; /* Remove background insets */
+    -fx-background-radius: 0; /* Remove background radius */
+}
+
+.menu-button .arrow {
+    -fx-opacity: 0; /* Hide the arrow */
+}
+
+.menu-button > .label {
+    -fx-text-fill: white;
+}
+
+.menu-button:hover > .label {
+    -fx-text-fill: -toolbar-gradient;
+}
+
+.menu-button .menu-item {
+    -fx-text-fill: black;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.search-button {
+    -fx-background-color: -toolbar-gradient;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.search-button:hover {
+    -fx-text-fill: -toolbar-bg-color;
+}
+
+.search-text-field {
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-cursor: text;
+}
+
+.load-more-button {
+    -fx-pref-width: 200;
+    -fx-pref-height: 25;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-background-color: -toolbar-gradient;
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.load-more-button:hover {
+    -fx-text-fill: -toolbar-bg-color;
+}
+
+.poster-image {
+    -fx-background-radius: 20;
+    -fx-clip-radius: 20;
+}
+
+.save-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.save-button:hover {
+    -fx-background-color: #45a049;
+    -fx-cursor: hand;
+}
+
+.save-button:pressed {
+    -fx-background-color: #3e8e41;
+}
+.media-card {
+    -fx-background-color: #e0e0e0;
+    -fx-padding: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.media-card:hover {
+    -fx-background-color: #d0d0d0;
+    -fx-cursor: hand;
+}
+
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.date-label, .genres-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+}
+
+.range-slider {
+    -fx-cursor: hand;
+}
+
+.range-slider .track {
+    -fx-background-color: #3498db;
+}
+
+.range-slider .thumb {
+    -fx-background-color: white;
+    -fx-border-color: #3498db;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #1b2040;
+    -fx-font-size: 14px;
+}
+
+.combo-box:hover {
+    -fx-border-color: -toolbar-gradient;
+}
+
+.combo-box .list-view {
+    -fx-background-color: white;
+    -fx-border-color: -toolbar-gradient;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+

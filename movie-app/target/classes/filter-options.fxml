@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import org.controlsfx.control.RangeSlider?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="pl.edu.pw.mini.movieapp.controllers.FilterOptionsController"
+      spacing="15" styleClass="filter-options" minWidth="265">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    
+    <Label text="Sort By:" style="-fx-font-weight: bold"/>
+    <ComboBox fx:id="sortOrderComboBox" prefWidth="200" styleClass="combo-box"/>
+    
+    <Separator/>
+    
+    <Label text="User Score:" style="-fx-font-weight: bold"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Label fx:id="minScoreLabel" text="0.0"/>
+        <RangeSlider fx:id="scoreRangeSlider" 
+                     styleClass="range-slider"
+                     HBox.hgrow="ALWAYS"
+                     min="0.0" max="10.0" 
+                     lowValue="0.0" highValue="10.0"/>
+        <Label fx:id="maxScoreLabel" text="10.0"/>
+    </HBox>
+    
+    <Separator/>
+    
+    <Label text="Year Range:" style="-fx-font-weight: bold"/>
+    <HBox spacing="10" alignment="CENTER">
+        <Label fx:id="minYearLabel" text="1900"/>
+        <RangeSlider fx:id="yearRangeSlider" 
+                     styleClass="range-slider"
+                     HBox.hgrow="ALWAYS"
+                     min="1900" max="2024"
+                     lowValue="1900" highValue="2024"/>
+        <Label fx:id="maxYearLabel" text="2024"/>
+    </HBox>
+
+    <Separator/>
+    
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="applyButton" text="Apply" 
+                styleClass="search-button" 
+                prefHeight="43.0" prefWidth="95.0" 
+                style="-fx-font-size: 14px;"/>
+        <Button fx:id="resetButton" text="Reset" 
+                styleClass="search-button" 
+                prefHeight="43.0" prefWidth="95.0" 
+                style="-fx-font-size: 14px;"/>
+    </HBox>
+    <Label fx:id="noResultsLabel" text="No results found" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #888;"/>
+</VBox>

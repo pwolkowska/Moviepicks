@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.pw.mini.movieapp.controllers.SeriesDetailsController"
+            prefHeight="700.0" prefWidth="1100.0">
+    <content>
+        <AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@styles.css">
+            <children>
+
+                <fx:include fx:id="toolbar" source="toolbar.fxml"/>
+                <VBox spacing="20" AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+                    <!-- Pierwszy rząd: szczegóły filmu -->
+                    <HBox spacing="20">
+                        <ImageView fx:id="imageView" fitWidth="300" fitHeight="450" preserveRatio="true"
+                                   styleClass="poster-image" />
+                        <!-- Szczegóły filmu -->
+                        <VBox spacing="10" prefWidth="750">
+                            <HBox spacing="5">
+                                <Label fx:id="titleLabel" text="Title" style="-fx-font-size: 26; -fx-font-weight: bold;" />
+                                <Label fx:id="yearLabel" text="Year" style="-fx-font-size: 26; -fx-font-weight: normal;" />
+                            </HBox>
+                            <Label fx:id="releaseDateLabel" text="Release Date" />
+                            <HBox spacing="5">
+                                <Label fx:id="genreLabel" text="Genre" style="-fx-font-size: 16;"/>
+                                <Label text=" - " style="-fx-font-size: 16;"/>
+                                <Label fx:id="seasonsLabel" text="Seasons" style="-fx-font-size: 16;"/>
+                            </HBox>
+                            <Label fx:id="overviewLabel" text="Overview" wrapText="true" style="-fx-font-size: 16;" />
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Label fx:id="ratingLabel" text="Rating" />
+                            <Label fx:id="countryLabel" text="Country" />
+                            <Label fx:id="languageLabel" text="Language" />
+                            <Hyperlink fx:id="trailerLabel" text="trailer" />
+                            <Button fx:id="saveSeriesButton" text="Add to your watchlist" styleClass="save-button" />
+
+                        </VBox>
+                    </HBox>
+
+
+                    <VBox spacing="10">
+                        <Label fx:id="similarSeriesLabel" text="Similar Series" style="-fx-font-size: 24; -fx-font-weight: bold;" />
+
+                        <HBox fx:id="similarSeriesContainer" spacing="20">
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.Region?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="pl.edu.pw.mini.movieapp.controllers.TrendingTodayController">
+    <padding>
+        <Insets left="30.0" right="30.0" top="10.0" bottom="10.0"/>
+    </padding>
+    <children>
+        <Region prefHeight="50.0" />
+        <Label alignment="TOP_LEFT" prefHeight="35.0" prefWidth="320.0" text="Movies Trending Today">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="trendingMoviesScrollPane" prefHeight="350.0" prefWidth="800.0" vbarPolicy="NEVER" fitToHeight="true">
+            <content>
+                <HBox fx:id="trendingMoviesHBox" alignment="CENTER_LEFT" prefHeight="250" prefWidth="800.0" spacing="15.0" styleClass="trending-hbox"/>
+            </content>
+        </ScrollPane>
+
+        <Label alignment="TOP_LEFT" prefHeight="35.0" text="Series Trending Today" style="-fx-padding: 40 0 0 0;">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ScrollPane fx:id="trendingSeriesScrollPane" prefHeight="350.0" prefWidth="800.0" vbarPolicy="NEVER" fitToHeight="true">
+            <content>
+                <HBox fx:id="trendingSeriesHBox" alignment="CENTER_LEFT" prefHeight="250" prefWidth="800.0" spacing="15.0" styleClass="trending-hbox"/>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>

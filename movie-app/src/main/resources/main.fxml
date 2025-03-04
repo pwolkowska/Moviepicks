@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="mainContent" fitToWidth="true" fitToHeight="true" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.pw.mini.movieapp.controllers.MainPageController">
+   <content>
+      <AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@styles.css">
+         <children>
+
+            <!--Toolbar-->
+            <fx:include fx:id="toolbar" source="toolbar.fxml" />
+
+            <!--Searching bar-->
+            <fx:include fx:id="searchBar" source="search-bar.fxml" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+      
+            <!-- Load Trending Today section dynamically -->
+            <VBox fx:id="mainVBox" prefHeight="850.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="650.0">
+               <!-- Placeholder for dynamic content -->
+            </VBox>
+
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

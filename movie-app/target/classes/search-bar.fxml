@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="pl.edu.pw.mini.movieapp.controllers.SearchBarController">
+    <VBox  AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" >
+        <children>
+            <Label prefHeight="150.0" text="Millions of movies, TV shows and people to discover. Explore now." wrapText="true">
+                <font>
+                    <Font size="35.0" />
+                </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <children>
+                    <Label text="Looking for: " style="-fx-font-size: 24; -fx-font-weight: bold;" />
+                    <Button fx:id="movieOrSeriesButton" text="Movie" onAction="#setMovieOrSeriesButton" styleClass="search-button" prefHeight="15.0" prefWidth="90.0" style="-fx-font-size: 14px;"/>
+                </children>
+            </HBox>
+            <Region prefHeight="10.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="43.0" spacing="0.0">
+                <children>
+                    <TextField fx:id="searchField" prefHeight="43.0" HBox.hgrow="ALWAYS" promptText="Search for a movie or tv show..." styleClass="search-text-field"/>
+                    <Button mnemonicParsing="false" prefHeight="43.0" prefWidth="120.0" text="Search" styleClass="search-button" onAction="#findSearchQuery"/>
+                    <ProgressIndicator fx:id="searchProgress" visible="false" prefHeight="30" prefWidth="30" />
+                </children>
+            </HBox>
+            <Region prefHeight="20.0" />
+        </children>
+        <ScrollPane fx:id="searchResultsScrollPane" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="600.0" AnchorPane.bottomAnchor="0.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+            <content>
+                <VBox fx:id="searchResultsContainer" spacing="10" style="-fx-padding: 10;"/>
+            </content>
+        </ScrollPane>
+        <padding>
+            <Insets left="30.0" right="30.0" />
+        </padding>
+    </VBox>
+</AnchorPane>

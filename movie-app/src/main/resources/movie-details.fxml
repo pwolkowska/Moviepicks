@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.pw.mini.movieapp.controllers.MovieDetailsController"
+            prefHeight="700.0" prefWidth="1100.0">
+    <content>
+        <AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@styles.css">
+            <children>
+                <fx:include fx:id="toolbar" source="toolbar.fxml"/>
+
+                <VBox spacing="20" AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+
+                    <HBox spacing="20">
+
+                        <ImageView fx:id="movieImageView" fitWidth="300" fitHeight="450" preserveRatio="true"
+                                   styleClass="poster-image" />
+
+                        <VBox spacing="10" prefWidth="750">
+                            <HBox spacing="5">
+                                <Label fx:id="movieTitleLabel" text="Title" style="-fx-font-size: 26; -fx-font-weight: bold;" />
+                                <Label fx:id="movieYearLabel" text="Year" style="-fx-font-size: 26; -fx-font-weight: normal;" />
+                            </HBox>
+                            <Label fx:id="movieReleaseDateLabel" text="Release Date" />
+                            <HBox spacing="5">
+                                <Label fx:id="movieGenreLabel" text="Genre" style="-fx-font-size: 16;"/>
+                                <Label text=" - " style="-fx-font-size: 16;"/>
+                                <Label fx:id="movieLengthLabel" text="Length" style="-fx-font-size: 16;"/>
+                            </HBox>
+                            <Label fx:id="movieDescriptionLabel" text="Overview" wrapText="true" style="-fx-font-size: 16;" />
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Region prefHeight="10"/>
+                            <Label fx:id="movieRatingLabel" text="Rating" />
+                            <Label fx:id="movieCountryLabel" text="Country" />
+                            <Label fx:id="movieLanguageLabel" text="Language" />
+                            <Hyperlink fx:id="movieTrailerLabel" text="Trailer" />
+                            <Button fx:id="saveMovieButton" text="Add to your watchlist" styleClass="save-button" />
+                        </VBox>
+                    </HBox>
+
+                    <VBox spacing="10">
+                        <Label fx:id="similarMoviesLabel" text="Similar Movies" style="-fx-font-size: 24; -fx-font-weight: bold;" />
+
+                        <HBox fx:id="similarMoviesContainer" spacing="20">
+
+                        </HBox>
+                    </VBox>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</ScrollPane>

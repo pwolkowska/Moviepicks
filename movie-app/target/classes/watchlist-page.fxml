@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pl.edu.pw.mini.movieapp.controllers.SavedMediaController"
+            prefHeight="700.0" prefWidth="1100.0">
+    <AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@styles.css">
+        <children>
+            <fx:include fx:id="toolbar" source="toolbar.fxml"/>
+            <VBox spacing="20" AnchorPane.topAnchor="120.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                <HBox alignment="CENTER">
+                    <Button fx:id="saveButton" text="Save" styleClass="search-button" prefHeight="43.0" prefWidth="120.0" style="-fx-font-size: 16px;"/>
+                </HBox>
+                <VBox fx:id="savedMediaContainer" spacing="10" >
+                </VBox>
+            </VBox>
+        </children>
+    </AnchorPane>
+</ScrollPane>
